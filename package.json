@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test:watch": "jest --watch",
-    "test": "jest",
+    "test": "jest --watch",
+    "test:ci": "jest",
     "extrair-feriados-nacionais": "ts-node-dev --respawn --project tsconfig.script.json scripts/extrair-feriados-anbima.ts --watch"
   },
   "dependencies": {

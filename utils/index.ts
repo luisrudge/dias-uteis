@@ -22,3 +22,6 @@ export const proximo = (d: Date): Date => {
   }
   return nextDay;
 };
+
+export const prazo = (d: Date, dias: number) =>
+  proximo(addBusinessDays(d, dias - 1));
