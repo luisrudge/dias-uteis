@@ -10,12 +10,8 @@ export const proximo = (d: Date): Date => {
   let nextDay;
   let contador = 1;
   while (!nextDay) {
-    const maybeNextDay = addBusinessDays(d, contador);
-    if (
-      !feriados
-        .map((f) => parseDate(f.date).getTime())
-        .includes(maybeNextDay.getTime())
-    ) {
+    const maybeNextDay = formatDate(addBusinessDays(d, contador));
+    if (!feriados.map((f) => f.date).includes(maybeNextDay)) {
       nextDay = maybeNextDay;
     }
     contador++;
